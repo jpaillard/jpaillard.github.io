@@ -2,12 +2,13 @@
   - firstname: ["Denis", "Denis A", "D. A.",  "Denis A."]
     url: https://denis-engemann.de/
 
+"reyero":
+  - firstname: ["Angel", "Angel Reyero Lobo"]
+    url: https://angelreyero.github.io/
+    
 "thirion":
   - firstname: ["Bertrand", "B."]
     url: https://pages.saclay.inria.fr/bertrand.thirion/
 
-"reyero":
-  - firstname: ["Angel", "Angel Reyero Lobo"]
-    url: https://angelreyero.github.io/
 
 

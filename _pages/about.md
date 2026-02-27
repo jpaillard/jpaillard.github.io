@@ -21,9 +21,13 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: true 
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi there, my personal webpage is under construction. 
+I am a second-year PhD student under the supervision of 
+[Bertrand Thirion](https://pages.saclay.inria.fr/bertrand.thirion/) 
+([Inria MIND](https://team.inria.fr/mind/)) and 
+[Denis Engemann](https://denis-engemann.de/) (Roche).
+
