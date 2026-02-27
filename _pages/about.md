@@ -26,8 +26,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a second-year PhD student under the supervision of 
+I am a second-year PhD student supervised by 
 [Bertrand Thirion](https://pages.saclay.inria.fr/bertrand.thirion/) 
-([Inria MIND](https://team.inria.fr/mind/)) and 
-[Denis Engemann](https://denis-engemann.de/) (Roche).
-
+at [Inria MIND](https://team.inria.fr/mind/) and 
+[Denis Engemann](https://denis-engemann.de/) at Roche.
+My research focuses on statistical machine learning methods for measuring 
+and explaining the importance of variables in complex prediction problems. 
+My research is motivated by applications in clinical neuroscience, 
+and in particular Alzheimer's disease. 
