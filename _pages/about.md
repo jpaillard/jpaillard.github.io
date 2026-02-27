@@ -34,3 +34,27 @@ My research focuses on statistical machine learning methods for measuring
 and explaining the importance of variables in complex prediction problems. 
 My research is motivated by applications in clinical neuroscience, 
 and in particular Alzheimer's disease. 
+
+
+### PhD project 🧠
+Machine learning (AI) models are increasingly powerful at predicting 
+outcomes from complex biomedical data, such as neuroimaging, proteomics, and 
+genomics. In Alzheimer's disease research, this translates to better diagnosis 
+and tracking of disease progression. However, in critical healthcare 
+applications, accurate prediction is not enough. It is necessary to understand 
+what the model bases its prediction on and to uncover the underlying biology.
+
+This is the problem my PhD focuses on: developing methods to explain what ML 
+models are learning from complex neuroscience data. A central goal is to 
+provide these explanations with rigorous statistical guarantees, a crucial 
+requirement to control the risk of making false discoveries in clinical 
+applications.
+
+### Open-source 🧑‍💻
+Open-source software is essential for reproducible research and scientific 
+collaboration. To support this effort, I contribute to developing and 
+maintaining [hidimstat](https://hidimstat.github.io/dev), a library providing statistical methods to measure 
+variable importance in prediction problems. It aims to provide a wide range of 
+methods, covering classic baselines and recent advances, with examples 
+illustrating how to apply them in different contexts.
+
