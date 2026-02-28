@@ -10,11 +10,13 @@ profile:
   # image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >  
-    <div style="line-height: 1.8; color: var(--global-text-color);">
-      <i class="fa-solid fa-map-marker-alt" style="width: 20px; text-align: center;"></i> Basel, Switzerland<br>
-    </div>
-    <div style="white-space: nowrap;">
-        <i class="fa-solid fa-envelope" style="width: 20px; text-align: center; margin-right: 8px;"></i> joseph.paillard[at]roche.com
+    <div style="line-height: 1.8; color: var(--global-text-color); text-align: left;">
+      <div style="display: flex; align-items: center; white-space: nowrap; justify-content: flex-start;">
+        <i class="fa-solid fa-map-marker-alt" style="width: 20px; text-align: center;"></i> Basel, Switzerland<br>
+      </div>
+      <div style="white-space: nowrap; justify-content: flex-start;">
+          <i class="fa-solid fa-envelope" style="width: 20px; text-align: center; margin-right: 8px;"></i> joseph.paillard[at]roche.com
+      </div>
     </div>
     <div style="display: flex; justify-content: center; align-items: center; gap: 15px; font-size: 1.5rem; margin-top: 10px; padding-left: 2px;">
       <a href="https://github.com/jpaillard" title="GitHub" style="color: inherit;">
@@ -53,8 +55,8 @@ and in particular Alzheimer's disease.
 
 
 ### PhD project 🧠
-Machine learning (AI) models are increasingly powerful at predicting 
-outcomes from complex biomedical data, such as neuroimaging, proteomics, and 
+Machine learning (AI) models are increasingly powerful at predicting from 
+complex biomedical data, such as neuroimaging, proteomics, and 
 genomics. In Alzheimer's disease research, this translates to better diagnosis 
 and tracking of disease progression. However, in critical healthcare 
 applications, accurate prediction is not enough. It is necessary to understand 
