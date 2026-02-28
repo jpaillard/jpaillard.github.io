@@ -14,11 +14,9 @@ profile:
       <i class="fa-solid fa-map-marker-alt" style="width: 20px; text-align: center;"></i> Basel, Switzerland<br>
     </div>
     <div style="white-space: nowrap;">
-        <a href="mailto:joseph.paillard[at]roche.com" style="color: inherit; text-decoration: none;">
-          <i class="fa-solid fa-envelope" style="width: 20px; text-align: center;"></i> joseph.paillard[at]roche.com
-        </a>
+        <i class="fa-solid fa-envelope" style="width: 20px; text-align: center; margin-right: 8px;"></i> joseph.paillard[at]roche.com
     </div>
-    <div style="display: flex; gap: 15px; font-size: 1.2rem; margin-top: 10px; padding-left: 2px;">
+    <div style="display: flex; justify-content: center; align-items: center; gap: 15px; font-size: 1.5rem; margin-top: 10px; padding-left: 2px;">
       <a href="https://github.com/jpaillard" title="GitHub" style="color: inherit;">
         <i class="fa-brands fa-github hover-icon"></i>
       </a>
