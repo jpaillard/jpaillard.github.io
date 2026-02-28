@@ -11,7 +11,7 @@ cv:
   sections:
     Education:
       - institution: Inria MIND and Roche
-        location: Basel, Switzerland and Saclay, France
+        location: Basel, Switzerland
         area: Computer Science and Neuroscience
         studyType: PhD
         start_date: 2024
@@ -91,12 +91,6 @@ cv:
         start_date: 2020
         end_date: 2021
         summary: Workshop based on the IPCC report designed to raise awareness about climate change.
-
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
     Languages:
       - name: French

@@ -2,7 +2,9 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD candidate @ Roche and 
+subtitle: >
+  This webpage is under construction. 
+  PhD candidate @ Roche and 
   <a href='https://team.inria.fr/mind/'>Inria MIND</a>. 
 
 profile:
@@ -10,13 +12,11 @@ profile:
   # image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >  
-    <div style="line-height: 1.8; color: var(--global-text-color); text-align: left;">
-      <div style="display: flex; align-items: center; white-space: nowrap; justify-content: flex-start;">
-        <i class="fa-solid fa-map-marker-alt" style="width: 20px; text-align: center;"></i> Basel, Switzerland<br>
-      </div>
-      <div style="white-space: nowrap; justify-content: flex-start;">
-          <i class="fa-solid fa-envelope" style="width: 20px; text-align: center; margin-right: 8px;"></i> joseph.paillard[at]roche.com
-      </div>
+    <div style="line-height: 1.8; color: var(--global-text-color);">
+      <i class="fa-solid fa-map-marker-alt" style="width: 20px; text-align: center;"></i> Basel, Switzerland<br>
+    </div>
+    <div style="white-space: nowrap;">
+        <i class="fa-solid fa-envelope" style="width: 20px; text-align: center; margin-right: 8px;"></i> joseph.paillard[at]roche.com
     </div>
     <div style="display: flex; justify-content: center; align-items: center; gap: 15px; font-size: 1.5rem; margin-top: 10px; padding-left: 2px;">
       <a href="https://github.com/jpaillard" title="GitHub" style="color: inherit;">
