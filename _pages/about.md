@@ -4,7 +4,7 @@ title: about
 permalink: /
 subtitle: >
   This webpage is under construction.
-  
+
 
   PhD candidate @ Roche and 
   <a href='https://team.inria.fr/mind/'>Inria MIND</a>. 
@@ -15,7 +15,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >  
     <div style="line-height: 1.8; color: var(--global-text-color);">
-      <i class="fa-solid fa-map-marker-alt" style="width: 20px; text-align: center;"></i> Basel, Switzerland<br>
+      <i class="fa-solid fa-map-marker-alt" style="width: 20px; text-align: center; margin-right: 8px;"></i> Basel, Switzerland<br>
     </div>
     <div style="white-space: nowrap;">
         <i class="fa-solid fa-envelope" style="width: 20px; text-align: center; margin-right: 8px;"></i> joseph.paillard[at]roche.com
