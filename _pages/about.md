@@ -12,9 +12,11 @@ profile:
   more_info: >  
     <div style="line-height: 1.8; color: var(--global-text-color);">
       <i class="fa-solid fa-map-marker-alt" style="width: 20px; text-align: center;"></i> Basel, Switzerland<br>
-      <a href="mailto:joseph.paillard[at]roche.com" style="color: inherit; text-decoration: none;">
-        <i class="fa-solid fa-envelope" style="width: 20px; text-align: center;"></i> joseph.paillard[at]roche.com
-      </a>
+    </div>
+    <div style="white-space: nowrap;">
+        <a href="mailto:joseph.paillard[at]roche.com" style="color: inherit; text-decoration: none;">
+          <i class="fa-solid fa-envelope" style="width: 20px; text-align: center;"></i> joseph.paillard[at]roche.com
+        </a>
     </div>
     <div style="display: flex; gap: 15px; font-size: 1.2rem; margin-top: 10px; padding-left: 2px;">
       <a href="https://github.com/jpaillard" title="GitHub" style="color: inherit;">
@@ -24,7 +26,7 @@ profile:
         <i class="fa-brands fa-linkedin hover-icon"></i>
       </a>
       <a href="https://scholar.google.com/citations?user=mhfxx9MAAAAJ&hl" title="Google Scholar" style="color: inherit;">
-        <i class="si si-google-scholar hover-icon"></i>
+        <i class="ai ai-google-scholar hover-icon"></i>
       </a>
     </div>
 
