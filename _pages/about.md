@@ -4,6 +4,7 @@ title: about
 permalink: /
 subtitle: >
   This webpage is under construction. 
+
   PhD candidate @ Roche and 
   <a href='https://team.inria.fr/mind/'>Inria MIND</a>. 
 
