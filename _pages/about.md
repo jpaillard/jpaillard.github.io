@@ -45,7 +45,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a second-year PhD student supervised by 
+I am a third-year PhD student supervised by 
 [Bertrand Thirion](https://pages.saclay.inria.fr/bertrand.thirion/) 
 at [Inria MIND](https://team.inria.fr/mind/) and 
 [Denis Engemann](https://denis-engemann.de/) at Roche.
