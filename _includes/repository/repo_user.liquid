@@ -1,37 +1,53 @@
-<div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.username }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-    <div class="card" style="border: 1px solid var(--global-divider-color); border-radius: 0.5rem; transition: transform 0.2s, box-shadow 0.2s;">
-      <div class="card-body" style="display: flex; align-items: center; gap: 1rem;">
-        <img
-          id="avatar-{{ include.username }}"
-          src="https://github.com/{{ include.username }}.png?size=80"
-          alt="{{ include.username }}"
-          style="width: 56px; height: 56px; border-radius: 50%;"
-          loading="lazy"
-        >
-        <div style="text-align: left;">
-          <h5 class="card-title" style="margin-bottom: 0.2rem; font-size: 1.05rem;">
-            <i class="fa-brands fa-github" style="margin-right: 0.3rem;"></i>@{{ include.username }}
-          </h5>
-          <p id="bio-{{ include.username }}" class="card-text" style="font-size: 0.85rem; color: var(--global-text-color-light); margin-bottom: 0;">
-          </p>
-        </div>
+<div class="github-user-card">
+  <a href="https://github.com/{{ include.username }}" target="_blank" rel="noopener noreferrer">
+    <div class="github-user-card-inner">
+      <img
+        id="avatar-{{ include.username }}"
+        class="github-user-avatar"
+        src="https://github.com/{{ include.username }}.png?size=120"
+        alt="{{ include.username }}"
+        loading="lazy"
+      >
+      <div class="github-user-info">
+        <h5 class="github-user-name">
+          <i class="fa-brands fa-github"></i>
+          <span id="name-{{ include.username }}">@{{ include.username }}</span>
+        </h5>
+        <p id="bio-{{ include.username }}" class="github-user-bio"></p>
+        <div id="user-stats-{{ include.username }}" class="github-user-stats"></div>
       </div>
     </div>
   </a>
 </div>
 
 <script>
-  (function() {
-    fetch("https://api.github.com/users/{{ include.username }}")
-      .then(function(r) { return r.json(); })
-      .then(function(data) {
+  (function () {
+    fetch('https://api.github.com/users/{{ include.username }}')
+      .then(function (r) {
+        return r.json();
+      })
+      .then(function (data) {
         if (data.message) return;
-        var bio = document.getElementById("bio-{{ include.username }}");
+        var nameEl = document.getElementById('name-{{ include.username }}');
+        if (nameEl && data.name) {
+          nameEl.textContent = data.name;
+        }
+        var bio = document.getElementById('bio-{{ include.username }}');
         if (bio && data.bio) {
           bio.textContent = data.bio;
         }
+        var stats = document.getElementById('user-stats-{{ include.username }}');
+        if (stats) {
+          var parts = [];
+          if (data.public_repos) {
+            parts.push('<span><i class="fa-solid fa-book-bookmark"></i>' + data.public_repos + ' repos</span>');
+          }
+          if (data.followers) {
+            parts.push('<span><i class="fa-solid fa-users"></i>' + data.followers + ' followers</span>');
+          }
+          stats.innerHTML = parts.join('');
+        }
       })
-      .catch(function() {});
+      .catch(function () {});
   })();
 </script>

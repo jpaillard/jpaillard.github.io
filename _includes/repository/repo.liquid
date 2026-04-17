@@ -2,47 +2,78 @@
 {% assign owner = repo_parts[0] %}
 {% assign name = repo_parts[1] %}
 
-<div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.repository }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-    <div class="card" style="border: 1px solid var(--global-divider-color); border-radius: 0.5rem; transition: transform 0.2s, box-shadow 0.2s;">
-      <div class="card-body" style="text-align: left;">
-        <h5 class="card-title" style="margin-bottom: 0.5rem; font-size: 1.05rem;">
-          <i class="fa-brands fa-github" style="margin-right: 0.4rem;"></i>
+<div class="repo-card">
+  <a href="https://github.com/{{ include.repository }}" target="_blank" rel="noopener noreferrer">
+    <div class="repo-card-inner">
+      <div class="repo-card-header">
+        <i class="fa-brands fa-github repo-icon"></i>
+        <span class="repo-name">
           {% if owner != site.data.repositories.github_users.first %}
-            <span style="color: var(--global-text-color-light);">{{ owner }}/</span>
+            <span class="repo-owner">{{ owner }}/</span>
           {% endif %}
           {{ name }}
-        </h5>
-        {% if include.description %}
-          <p class="card-text" id="desc-{{ owner }}-{{ name }}" style="font-size: 0.88rem; color: var(--global-text-color-light); margin-bottom: 0.75rem; min-height: 2.6em;">
-            {{ include.description }}
-          </p>
-        {% else %}
-          <p class="card-text" id="desc-{{ owner }}-{{ name }}" style="font-size: 0.88rem; color: var(--global-text-color-light); margin-bottom: 0.75rem; min-height: 2.6em;">
-          </p>
-        {% endif %}
-        <div id="stats-{{ owner }}-{{ name }}" style="display: flex; align-items: center; gap: 1rem; font-size: 0.82rem; color: var(--global-text-color-light);">
-        </div>
+        </span>
       </div>
+      <p class="repo-description" id="desc-{{ owner }}-{{ name }}">
+        {% if include.description %}
+          {{ include.description }}
+        {% endif %}
+      </p>
+      <div class="repo-meta" id="stats-{{ owner }}-{{ name }}"></div>
     </div>
   </a>
 </div>
 
 <script>
-  (function() {
+  (function () {
+    var langColors = {
+      Python: "#3572A5",
+      JavaScript: "#f1e05a",
+      TypeScript: "#3178c6",
+      R: "#198CE7",
+      Julia: "#a270ba",
+      Java: "#b07219",
+      "C++": "#f34b7d",
+      C: "#555555",
+      Rust: "#dea584",
+      Go: "#00ADD8",
+      MATLAB: "#e16737",
+      Shell: "#89e051",
+      Jupyter: "#DA5B0B",
+      "Jupyter Notebook": "#DA5B0B",
+      HTML: "#e34c26",
+      CSS: "#563d7c",
+    };
     fetch("https://api.github.com/repos/{{ include.repository }}")
-      .then(function(r) { return r.json(); })
-      .then(function(data) {
+      .then(function (r) {
+        return r.json();
+      })
+      .then(function (data) {
         if (data.message) return;
         var stats = document.getElementById("stats-{{ owner }}-{{ name }}");
         if (stats) {
           var parts = [];
           if (data.language) {
-            parts.push('<span><i class="fa-solid fa-code" style="margin-right:0.25rem;"></i>' + data.language + '</span>');
+            var color = langColors[data.language] || "#858585";
+            parts.push(
+              '<span class="repo-lang"><span class="lang-dot" style="background:' +
+                color +
+                ';"></span>' +
+                data.language +
+                "</span>",
+            );
           }
-          parts.push('<span><i class="fa-regular fa-star" style="margin-right:0.25rem;"></i>' + data.stargazers_count + '</span>');
-          parts.push('<span><i class="fa-solid fa-code-fork" style="margin-right:0.25rem;"></i>' + data.forks_count + '</span>');
-          stats.innerHTML = parts.join('');
+          parts.push(
+            '<span class="repo-stat"><i class="fa-regular fa-star"></i>' +
+              data.stargazers_count +
+              "</span>",
+          );
+          parts.push(
+            '<span class="repo-stat"><i class="fa-solid fa-code-fork"></i>' +
+              data.forks_count +
+              "</span>",
+          );
+          stats.innerHTML = parts.join("");
         }
         {% unless include.description %}
         if (data.description) {
@@ -53,6 +84,6 @@
         }
         {% endunless %}
       })
-      .catch(function() {});
+      .catch(function () {});
   })();
 </script>

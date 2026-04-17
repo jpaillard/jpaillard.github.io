@@ -161,21 +161,195 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Repositories
+// Repositories — GitHub profile section
 
-@media (min-width: 768px) {
-  .repo {
-    max-width: 50%;
+.github-profile-section {
+  margin-bottom: 2rem;
+}
+
+.github-user-card {
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 }
 
-.repo .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.github-user-card-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.75rem;
+  background: var(--global-card-bg-color);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
-  .card-title {
-    color: var(--global-theme-color);
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   }
+}
+
+.github-user-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.github-user-info {
+  min-width: 0;
+}
+
+.github-user-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+  color: var(--global-text-color);
+
+  i {
+    margin-right: 0.4rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+.github-user-bio {
+  font-size: 0.88rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.github-user-stats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+}
+
+// Repositories — repo grid & cards
+
+.repo-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--global-text-color);
+}
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.repo-card {
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+}
+
+.repo-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.75rem;
+  background: var(--global-card-bg-color);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-color: var(--global-theme-color);
+
+    .repo-name {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+.repo-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.repo-icon {
+  font-size: 1.1rem;
+  color: var(--global-text-color-light);
+  flex-shrink: 0;
+}
+
+.repo-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--global-text-color);
+  transition: color 0.2s ease;
+  word-break: break-word;
+}
+
+.repo-owner {
+  font-weight: 400;
+  color: var(--global-text-color-light);
+}
+
+.repo-description {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+  flex-grow: 1;
+}
+
+.repo-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.78rem;
+  color: var(--global-text-color-light);
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.repo-lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.lang-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.repo-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 // Social (bottom)
