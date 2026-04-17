@@ -1,10 +1,12 @@
 github_users:
   - jpaillard
 
-repo_description_lines_max: 2
-
 github_repos:
-  - mind-inria/hidimstat
-  - Roche/neuro-green
-  - eeg-augmentation-benchmark/eeg-augmentation-benchmark-2022
-  - jpaillard/permucate
+  - repo: mind-inria/hidimstat
+    description: Statistical methods for variable importance in prediction problems.
+  - repo: Roche/neuro-green
+    description: "GREEN: a deep learning architecture combining Gabor wavelets and Riemannian geometry for EEG analysis."
+  - repo: eeg-augmentation-benchmark/eeg-augmentation-benchmark-2022
+    description: Benchmarking EEG data augmentation methods.
+  - repo: jpaillard/permucate
+    description: Feature importanec for heterogeneous treatment effects.

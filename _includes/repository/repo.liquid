@@ -1,47 +1,58 @@
-{% assign repo_url = include.repository | split: '/' %}
-{% if site.data.repositories.github_users contains repo_url.first %}
-  {% assign show_owner = false %}
-{% else %}
-  {% assign show_owner = true %}
-{% endif %}
-
-{% assign lang = site.lang | split: '-' | first %}
-
-{% case lang %}
-  {% when 'pt' %}
-    {% assign lang = site.lang %}
-
-  {% when 'zh' %}
-    {% assign lang_last = site.lang | split: '-' | last %}
-    {% case lang_last %}
-      {% when 'cn', 'sg', 'my', 'hans' %}
-        {% assign lang = 'cn' %}
-      {% when 'tw', 'hk', 'mo', 'hant' %}
-        {% assign lang = 'zh-tw' %}
-    {% endcase %}
-
-    {% comment %} Add a new language using when... if needed {% endcomment %}
-    {% comment %} If you still encounter language-display issues, check the available locale codes in github-readme-stats (different from ISO-639 standard used in your website) {% endcomment %}
-    {% comment %} https://github.com/anuraghazra/github-readme-stats?tab=readme-ov-file#available-locales {% endcomment %}
-{% endcase %}
-
-{% if site.data.repositories.repo_description_lines_max %}
-  {% assign max_lines = site.data.repositories.repo_description_lines_max %}
-{% else %}
-  {% assign max_lines = 2 %}
-{% endif %}
+{% assign repo_parts = include.repository | split: '/' %}
+{% assign owner = repo_parts[0] %}
+{% assign name = repo_parts[1] %}
 
 <div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.repository }}">
-    <img
-      class="only-light w-100"
-      alt="{{ include.repository }}"
-      src="{{ site.external_services.github_readme_stats_url }}/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-    >
-    <img
-      class="only-dark w-100"
-      alt="{{ include.repository }}"
-      src="{{ site.external_services.github_readme_stats_url }}/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-    >
+  <a href="https://github.com/{{ include.repository }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+    <div class="card" style="border: 1px solid var(--global-divider-color); border-radius: 0.5rem; transition: transform 0.2s, box-shadow 0.2s;">
+      <div class="card-body" style="text-align: left;">
+        <h5 class="card-title" style="margin-bottom: 0.5rem; font-size: 1.05rem;">
+          <i class="fa-brands fa-github" style="margin-right: 0.4rem;"></i>
+          {% if owner != site.data.repositories.github_users.first %}
+            <span style="color: var(--global-text-color-light);">{{ owner }}/</span>
+          {% endif %}
+          {{ name }}
+        </h5>
+        {% if include.description %}
+          <p class="card-text" id="desc-{{ owner }}-{{ name }}" style="font-size: 0.88rem; color: var(--global-text-color-light); margin-bottom: 0.75rem; min-height: 2.6em;">
+            {{ include.description }}
+          </p>
+        {% else %}
+          <p class="card-text" id="desc-{{ owner }}-{{ name }}" style="font-size: 0.88rem; color: var(--global-text-color-light); margin-bottom: 0.75rem; min-height: 2.6em;">
+          </p>
+        {% endif %}
+        <div id="stats-{{ owner }}-{{ name }}" style="display: flex; align-items: center; gap: 1rem; font-size: 0.82rem; color: var(--global-text-color-light);">
+        </div>
+      </div>
+    </div>
   </a>
 </div>
+
+<script>
+  (function() {
+    fetch("https://api.github.com/repos/{{ include.repository }}")
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.message) return;
+        var stats = document.getElementById("stats-{{ owner }}-{{ name }}");
+        if (stats) {
+          var parts = [];
+          if (data.language) {
+            parts.push('<span><i class="fa-solid fa-code" style="margin-right:0.25rem;"></i>' + data.language + '</span>');
+          }
+          parts.push('<span><i class="fa-regular fa-star" style="margin-right:0.25rem;"></i>' + data.stargazers_count + '</span>');
+          parts.push('<span><i class="fa-solid fa-code-fork" style="margin-right:0.25rem;"></i>' + data.forks_count + '</span>');
+          stats.innerHTML = parts.join('');
+        }
+        {% unless include.description %}
+        if (data.description) {
+          var desc = document.getElementById("desc-{{ owner }}-{{ name }}");
+          if (desc && !desc.textContent.trim()) {
+            desc.textContent = data.description;
+          }
+        }
+        {% endunless %}
+      })
+      .catch(function() {});
+  })();
+</script>
