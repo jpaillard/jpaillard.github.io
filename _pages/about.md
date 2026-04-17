@@ -76,4 +76,5 @@ maintaining [hidimstat](https://hidimstat.github.io/dev), a library providing st
 variable importance in prediction problems. It aims to provide a wide range of 
 methods, covering classic baselines and recent advances, with examples 
 illustrating how to apply them in different contexts.
+See more on the [code](/code/) page.
 
