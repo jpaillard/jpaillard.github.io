@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-04-15'
+  last_updated: '2026-05-20'
 papers:
   mhfxx9MAAAAJ:9yKSN-GCB0IC:
-    citations: 36
+    citations: 37
     title: Machine learning of brain-specific biomarkers from EEG
     year: '2024'
   mhfxx9MAAAAJ:IjCSPb-OGe4C:
-    citations: 24
+    citations: 28
     title: 'GREEN: A lightweight architecture using learnable wavelets and Riemannian geometry for biomarker exploration with EEG signals'
     year: '2025'
   mhfxx9MAAAAJ:Tyk-4Ss8FVUC:
@@ -14,13 +14,13 @@ papers:
     title: 'Neurologically altered brain activity may not look like aged brain activity: Implications for brain-age modeling and biomarker strategies'
     year: '2025'
   mhfxx9MAAAAJ:W7OEmFMy1HYC:
-    citations: 1
+    citations: 2
     title: Benchmarking the utility of dry-electrode electroencephalography for clinical trials
     year: '2025'
   mhfxx9MAAAAJ:WF5omc3nYNoC:
-    citations: 0
+    citations: 5
     title: 'Braindecode: toolbox for decoding raw electrophysiological brain data with deep learning models'
-    year: Unknown Year
+    year: '2025'
   mhfxx9MAAAAJ:Y0pCki6q_DkC:
     citations: 0
     title: Hierarchical Variable Importance with Statistical Control for Medical Data-Based Prediction
@@ -30,7 +30,7 @@ papers:
     title: Machine learning of brain-specific biomarkers from eeg. bioRxiv
     year: '2023'
   mhfxx9MAAAAJ:d1gkVwhDpl0C:
-    citations: 141
+    citations: 152
     title: 'Data augmentation for learning predictive models on EEG: a systematic comparison'
     year: '2022'
   mhfxx9MAAAAJ:eQOLeE2rZwMC:
@@ -38,10 +38,10 @@ papers:
     title: 'Aggregate Models, Not Explanations: Improving Feature Importance Estimation'
     year: '2026'
   mhfxx9MAAAAJ:qjMakFHDy7sC:
-    citations: 5
+    citations: 7
     title: Measuring Variable Importance in Heterogeneous Treatment Effects with Confidence
     year: '2025'
   mhfxx9MAAAAJ:u5HHmVD_uO8C:
-    citations: 68
+    citations: 70
     title: 'CADDA: Class-wise automatic differentiable data augmentation for EEG signals'
     year: '2022'
