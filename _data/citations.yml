@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-06-03'
+  last_updated: '2026-06-08'
 papers:
   mhfxx9MAAAAJ:9yKSN-GCB0IC:
-    citations: 37
+    citations: 36
     title: Machine learning of brain-specific biomarkers from EEG
     year: '2024'
   mhfxx9MAAAAJ:IjCSPb-OGe4C:
-    citations: 29
+    citations: 30
     title: 'GREEN: A lightweight architecture using learnable wavelets and Riemannian geometry for biomarker exploration with EEG signals'
     year: '2025'
   mhfxx9MAAAAJ:Tyk-4Ss8FVUC:
@@ -30,7 +30,7 @@ papers:
     title: Machine learning of brain-specific biomarkers from eeg. bioRxiv
     year: '2023'
   mhfxx9MAAAAJ:d1gkVwhDpl0C:
-    citations: 155
+    citations: 156
     title: 'Data augmentation for learning predictive models on EEG: a systematic comparison'
     year: '2022'
   mhfxx9MAAAAJ:eQOLeE2rZwMC:
