@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-01'
+  last_updated: '2026-07-13'
 papers:
   mhfxx9MAAAAJ:9yKSN-GCB0IC:
     citations: 38
@@ -30,7 +30,7 @@ papers:
     title: Machine learning of brain-specific biomarkers from eeg. bioRxiv
     year: '2023'
   mhfxx9MAAAAJ:d1gkVwhDpl0C:
-    citations: 165
+    citations: 169
     title: 'Data augmentation for learning predictive models on EEG: a systematic comparison'
     year: '2022'
   mhfxx9MAAAAJ:eQOLeE2rZwMC:
@@ -38,10 +38,10 @@ papers:
     title: 'Aggregate Models, Not Explanations: Improving Feature Importance Estimation'
     year: '2026'
   mhfxx9MAAAAJ:qjMakFHDy7sC:
-    citations: 7
+    citations: 8
     title: Measuring Variable Importance in Heterogeneous Treatment Effects with Confidence
     year: '2025'
   mhfxx9MAAAAJ:u5HHmVD_uO8C:
-    citations: 74
+    citations: 75
     title: 'CADDA: Class-wise automatic differentiable data augmentation for EEG signals'
     year: '2022'
