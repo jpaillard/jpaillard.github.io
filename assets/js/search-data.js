@@ -31,8 +31,8 @@ ninja.data = [{
             window.location.href = "/cv/";
           },
         },{id: "nav-teaching",
-          title: "teaching",
-          description: "",
+          title: "Teaching",
+          description: "Teaching assistant for Python for Data Science in the Master in Data Science for Business",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
@@ -49,9 +49,9 @@ ninja.data = [{
           section: "News",},{id: "news-i-was-recognized-as-a-silver-reviewer-for-my-service-as-a-reviewer-for-icml-2026",
           title: '🥈 I was recognized as a silver reviewer for my service as a...',
           description: "",
-          section: "News",},{id: "teachings-python-for-datascience",
-          title: 'Python For Datascience',
-          description: "",
+          section: "News",},{id: "teachings-python-for-data-science",
+          title: 'Python for Data Science',
+          description: "Practical introduction to Python for data analysis, visualisation, and machine learning.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/python-for-datascience/";
             },},{
